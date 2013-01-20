@@ -1,4 +1,4 @@
-class application::deb-install {
+class app::deb-installer {
 	define install ($download_dir = '/var/downloads', $package_name, $package_url, $deb_name) {
 	  exec { "deb-download-$package_name":
 	    command     => "wget -O $download_dir/$deb_name $package_url",
